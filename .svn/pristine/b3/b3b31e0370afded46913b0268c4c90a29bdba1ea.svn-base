@@ -1,0 +1,9 @@
+<suite name="AuthorizationAndLogin" verbose="1" >
+  <test name="AuthorizationAndLoginTest">
+    <classes>
+      <class name="com.kmehohsoft.dev.LoginPageTest"/>
+      <class name="com.kmehohsoft.dev.LoginAfterActivationTest"/>
+	  <class name="com.kmehohsoft.dev.MainApplicationPageTest"/>
+    </classes>
+  </test>
+</suite>

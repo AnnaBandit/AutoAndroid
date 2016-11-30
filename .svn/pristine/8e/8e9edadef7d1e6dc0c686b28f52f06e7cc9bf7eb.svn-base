@@ -1,0 +1,53 @@
+package com.kmehohsoft.dev;
+
+import com.kmehohsoft.dev.androidpages.LoginActivity;
+import com.kmehohsoft.dev.androidpages.MainApplicationPageActivity;
+import com.kmehohsoft.dev.framework.BaseTest;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+import static org.fest.assertions.Assertions.assertThat;
+import static com.kmehohsoft.dev.framework.AndroidBasePage.initPage;
+
+public class MainApplicationPageTest  extends BaseTest {
+
+    private LoginActivity loginactivity;
+    private MainApplicationPageActivity mainapplicationpageactivity;
+
+    @BeforeSuite(alwaysRun = true)
+    public void openMainApplicationPage() {
+        loginactivity = initPage(LoginActivity.class);
+        mainapplicationpageactivity = initPage(MainApplicationPageActivity.class);
+    }
+
+    @Test(priority = 1,groups = {"MainPage"})
+    public void watchUserAgreement(){
+        loginactivity.clickLoginButton();
+        mainapplicationpageactivity.openApplicationMenu();
+        mainapplicationpageactivity.openLicenceView();
+        assertThat(mainapplicationpageactivity.checkIfLicenceViewVisible()).isTrue();
+    }
+
+    @Test(priority = 2,groups = {"MainPage"})
+    public void backToPatientsPage(){
+         mainapplicationpageactivity.openApplicationMenu();
+         mainapplicationpageactivity.openPatientsList();
+         assertThat(mainapplicationpageactivity.checkIfMainPagePresent()).isTrue();
+     }
+
+    @Test(priority = 3,enabled = true,groups = {"MainPage"})
+    public void downloadOrOpenManual(){
+        mainapplicationpageactivity.openApplicationMenu();
+        mainapplicationpageactivity.clickManualItem();
+        mainapplicationpageactivity.downloadManual();
+        mainapplicationpageactivity.postponeManualOpening();
+        assertThat(mainapplicationpageactivity.checkIfMainPagePresent()).isTrue();
+    }
+
+    @Test(dataProvider = "UserID",priority = 4,groups = {"MainPage"})
+    public void checkApplicationData(String userid){
+        mainapplicationpageactivity.openApplicationMenu();
+        mainapplicationpageactivity.clickAboutItem();
+        assertThat(mainapplicationpageactivity.checkApplicationData(userid)).isTrue();
+    }
+}

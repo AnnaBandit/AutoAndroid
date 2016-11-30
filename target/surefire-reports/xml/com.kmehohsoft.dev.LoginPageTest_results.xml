@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AuthorizationAndLoginTest"
+           tests="9"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="23.291">
+  <properties />
+  
+  
+            <testcase name="userActivation" time="9.703" classname="com.kmehohsoft.dev.LoginPageTest" />
+                <testcase name="switchToAuthorizationPage" time="0.949" classname="com.kmehohsoft.dev.LoginPageTest" />
+                <testcase name="switchLanguage" time="1.727" classname="com.kmehohsoft.dev.LoginPageTest" />
+                <testcase name="switchLanguage" time="1.661" classname="com.kmehohsoft.dev.LoginPageTest" />
+                <testcase name="switchLanguage" time="1.658" classname="com.kmehohsoft.dev.LoginPageTest" />
+                <testcase name="switchLanguage" time="1.647" classname="com.kmehohsoft.dev.LoginPageTest" />
+                <testcase name="switchLanguage" time="1.698" classname="com.kmehohsoft.dev.LoginPageTest" />
+                <testcase name="switchToUserAgreementPage" time="2.635" classname="com.kmehohsoft.dev.LoginPageTest" />
+                <testcase name="switchLanguage" time="1.613" classname="com.kmehohsoft.dev.LoginPageTest" />
+      
+</testsuite>

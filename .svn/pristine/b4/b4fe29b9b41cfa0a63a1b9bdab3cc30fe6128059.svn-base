@@ -1,0 +1,103 @@
+package com.kmehohsoft.dev.androidpages;
+
+import com.kmehohsoft.dev.framework.AndroidBasePage;
+import com.kmehohsoft.dev.framework.Utils;
+import com.kmehohsoft.dev.serverside.ERIDataBase;
+import io.appium.java_client.MobileElement;
+import org.openqa.selenium.By;
+
+public class MainApplicationPageActivity extends AndroidBasePage {
+
+    private String applicationMenuClass = "android.widget.ImageButton";
+    private String menuItemsID = "eri.kmehohsoft.android.tablet:id/rowText";
+    private String licenceAgreementViewID = "eri.kmehohsoft.android.tablet:id/licence_text_view";
+    private String scanWithoutRegistrationButton = "eri.kmehohsoft.android.tablet:id/scan_without_registration";
+    private String manualDownloadDialogID = "eri.kmehohsoft.android.tablet:id/alertTitle";
+    private String manualDownloadDialogText = "You don't have the user manual. Download it?";
+    private String openManualDialogID = "android:id/message";
+    private String openManualDialogText = "User manual has been downloaded. Open it now?";
+    private String downloadManualDialogButtonID = "android:id/button1";
+    private String openLaterManualButtonID = "android:id/button2";
+    private String applicationVersionLabelId = "eri.kmehohsoft.android.tablet:id/version";
+    private String userAccountLinkID = "eri.kmehohsoft.android.tablet:id/accountant_info";
+
+
+    public MainApplicationPageActivity(){
+        eriDataBase = new ERIDataBase(settings.getAzureServerName(),settings.getAzureServerDBName(),settings.getAzureServerUserLogin(),settings.getAzureServerUserPassword());
+    }
+
+    public void openApplicationMenu(){
+        MobileElement menu  = (MobileElement)AndroidBasePage.androiddriver.findElementsByClassName(applicationMenuClass).get(0);
+        menu.tap(1, 10);
+    }
+
+    public void openLicenceView(){
+        MobileElement licence  = (MobileElement)AndroidBasePage.androiddriver.findElementsById(menuItemsID).get(1);
+        licence.tap(1,1000);
+    }
+
+    public boolean checkIfLicenceViewVisible(){
+        return Utils.isElementPresent(By.id(licenceAgreementViewID));
+    }
+
+    public void openPatientsList(){
+        MobileElement patients  = (MobileElement)AndroidBasePage.androiddriver.findElementsById(menuItemsID).get(0);
+        patients.tap(1,1000);
+    }
+
+    public boolean checkIfMainPagePresent(){
+        return Utils.isElementPresent(By.id(scanWithoutRegistrationButton));
+    }
+
+    private boolean checkIfManualDownloadDialogPresent(){
+        MobileElement downloadManualDialog  = (MobileElement)AndroidBasePage.androiddriver.findElementsById(manualDownloadDialogID).get(0);
+        if (!downloadManualDialog.isDisplayed()) return false;
+        return  downloadManualDialog.getText().contains(manualDownloadDialogText);
+    }
+
+    private boolean checkIfOpenManualDialogPresent(){
+        MobileElement openManualDialog  = (MobileElement)AndroidBasePage.androiddriver.findElementsById(openManualDialogID).get(0);
+        if (!openManualDialog.isDisplayed()) return false;
+        return openManualDialog.getText().contains(openManualDialogText);
+    }
+
+    public void clickManualItem(){
+        MobileElement manualItem  = (MobileElement)AndroidBasePage.androiddriver.findElementsById(menuItemsID).get(2);
+        manualItem.tap(1,1000);
+    }
+
+    public void downloadManual(){
+        if (checkIfManualDownloadDialogPresent()){
+            MobileElement downloadButton  = (MobileElement)AndroidBasePage.androiddriver.findElementsById(downloadManualDialogButtonID).get(0);
+            downloadButton.tap(1,500);
+        }
+    }
+
+    public void postponeManualOpening(){
+        if (checkIfOpenManualDialogPresent()){
+            MobileElement laterButton  = (MobileElement)AndroidBasePage.androiddriver.findElementsById(openLaterManualButtonID).get(0);
+            laterButton.tap(1,500);
+        }
+    }
+
+    public void clickAboutItem(){
+        MobileElement AboutItem  = (MobileElement)AndroidBasePage.androiddriver.findElementsById(menuItemsID).get(3);
+        AboutItem.tap(1,1000);
+    }
+
+    private boolean checkApplicationVersion(){
+        MobileElement versionLabel  = (MobileElement)AndroidBasePage.androiddriver.findElementsById(applicationVersionLabelId).get(0);
+        return versionLabel.getText().contains(settings.getApplicationVersionFromName());
+    }
+
+    private boolean checkUserAccountLink(int userid){
+      //  MobileElement accountLink  = (MobileElement)AndroidBasePage.androiddriver.findElementsById(userAccountLinkID).get(0);
+        MobileElement accountLink  = (MobileElement)AndroidBasePage.androiddriver.findElementsById(userAccountLinkID);
+        System.out.println(eriDataBase.getUserDomainName(userid) + "\\" + eriDataBase.getUserLoginName(userid));
+        return  accountLink.getText().contains(eriDataBase.getUserDomainName(userid) + "\\" + eriDataBase.getUserLoginName(userid));
+    }
+
+    public boolean checkApplicationData(String userid){
+        return checkApplicationVersion() && checkUserAccountLink(Integer.parseInt(userid));
+    }
+}
