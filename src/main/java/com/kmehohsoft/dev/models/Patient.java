@@ -15,7 +15,7 @@ public class Patient {
      private String address;
      private String phone;
      private String email;
-     private String bloodTypeGroup;
+     private byte bloodTypeGroup;
      private boolean bloodTypeRhesus;
      private String allergies;
      private String familyDiseases;
@@ -39,7 +39,7 @@ public class Patient {
         address = "";
         phone = "";
         email = "";
-        bloodTypeGroup = "";
+        bloodTypeGroup = (byte)0;
         bloodTypeRhesus = false;
         allergies = "";
         familyDiseases = "";
@@ -103,7 +103,7 @@ public class Patient {
         address = generateRandomString(30,charList);
         phone = generateRandomString(10,digitsList);
         email = generateRandomString(10,charList) + "@" + generateRandomString(5,charList) + "." + "com";
-        bloodTypeGroup = generatePatientBloodTypeGroup();
+        bloodTypeGroup = (byte)randomIntValue.nextInt(4);
         bloodTypeRhesus = randomBooleanValue.nextBoolean();
         allergies = generateRandomString(30, charList);
         familyDiseases = generateRandomString(30,charList);
@@ -147,7 +147,7 @@ public class Patient {
         return email;
     }
 
-    public String getBloodTypeGroup(){
+    public byte getBloodTypeGroup(){
         return bloodTypeGroup;
     }
 

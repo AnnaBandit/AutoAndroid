@@ -12,38 +12,32 @@
 <body>
 <h1>AuthorizationAndLoginTest</h1>
 <p>
-  Test duration: 167.662s
+  Test duration: 0.005s
 </p>
 
-
-
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">com.kmehohsoft.dev.MainApplicationPageTest</td>
+  <table class="resultsTable configTable">
+    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
+              <tr class="group">
+        <td colspan="3">com.kmehohsoft.dev.MainApplicationPageTest</td>
       </tr>
             
 <tr>
   <td class="method">
-                  downloadDatabase
+                  beforeSuite
       </td>
   <td class="duration">
-    80.942s
+    0.000s
   </td>
   <td class="result">
         
     
         
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)<br/>
-Command duration or timeout: 80.93 seconds<br/>
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: eri.kmehohsoft.android.tablet/eri.kmehohsoft.android.MainActivity never started. Current: eri.kmehohsoft.android.tablet/eri.kmehohsoft.android.LoginActivity) (WARNING: The server did not provide any stacktrace information)<br/>
+Command duration or timeout: 0 milliseconds<br/>
 Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;<br/>
-System info: host: &apos;agoncharova&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_92&apos;<br/>
-Driver info: io.appium.java_client.android.AndroidDriver<br/>
-Capabilities [{app=C:\Users\agoncharova\AppData\Local\Android\sdk\platform-tools\release604_2.0.1.apk, networkConnectionEnabled=true, noReset=true, warnings={}, databaseEnabled=false, deviceName=emulator-5554, launchTimeout=10000, platform=LINUX, desired={app=C:\Users\agoncharova\AppData\Local\Android\sdk\platform-tools\release604_2.0.1.apk, noReset=true, platformVersion=5.1, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=emulator-5554, launchTimeout=10000, resetKeyboard=true}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, browserName=, takesScreenshot=true, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, resetKeyboard=true}]<br/>
-Session ID: 3c345ed4-5e64-490a-b934-ff139314c888<br/>
-*** Element info: {Using=id, value=eri.kmehohsoft.android.tablet:id/login_button}</b></a><br />
+System info: host: &apos;DESKTOP-J47ACUC&apos;, ip: &apos;192.168.207.93&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_111&apos;<br/>
+Driver info: driver.version: AndroidDriver</b></a><br />
     <div class="stackTrace" id="exception-0">
               sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
               sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br />
@@ -51,31 +45,75 @@ Session ID: 3c345ed4-5e64-490a-b934-ff139314c888<br/>
               java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
               org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)<br />
               org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)<br />
+              org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:161)<br />
+              org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:64)<br />
+              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:141)<br />
+              io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:67)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)<br />
               io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)<br />
               io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)<br />
               io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)<br />
-              io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:62)<br />
-              io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)<br />
-              io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)<br />
-              org.openqa.selenium.By$ById.findElement(By.java:218)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)<br />
-              io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)<br />
-              io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)<br />
-              io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)<br />
-              org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)<br />
-              org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)<br />
-              com.sun.proxy.$Proxy8.click(Unknown Source)<br />
-              com.kmehohsoft.dev.androidpages.LoginActivity.clickLoginButton(LoginActivity.java:73)<br />
-              com.kmehohsoft.dev.MainApplicationPageTest.downloadDatabase(MainApplicationPageTest.java:28)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:241)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:128)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:141)<br />
+              io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)<br />
+              io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:161)<br />
+              io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:170)<br />
+              io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:82)<br />
+              com.kmehohsoft.dev.framework.BaseTest.beforeSuite(BaseTest.java:40)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
               java.lang.reflect.Method.invoke(Method.java:498)<br />
               org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
-              org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:277)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+              org.testng.TestNG.run(TestNG.java:1031)<br />
+              org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:122)<br />
+              org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:88)<br />
+              org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:104)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)<br />
+              com.sun.proxy.$Proxy0.invoke(Unknown Source)<br />
+              org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)<br />
+              org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  closeApp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
+    <div class="stackTrace" id="exception-1">
+              com.kmehohsoft.dev.MainApplicationPageTest.closeApp(MainApplicationPageTest.java:68)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:786)<br />
               org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
               org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
               org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
@@ -106,11 +144,281 @@ Session ID: 3c345ed4-5e64-490a-b934-ff139314c888<br/>
                 </div>
       </td>
 </tr>
-      </table>
+<tr>
+  <td class="method">
+                  closeApp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
+    <div class="stackTrace" id="exception-2">
+              com.kmehohsoft.dev.MainApplicationPageTest.closeApp(MainApplicationPageTest.java:68)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:786)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
+              org.testng.TestRunner.run(TestRunner.java:617)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+              org.testng.TestNG.run(TestNG.java:1031)<br />
+              org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:122)<br />
+              org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:88)<br />
+              org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:104)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)<br />
+              com.sun.proxy.$Proxy0.invoke(Unknown Source)<br />
+              org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)<br />
+              org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  closeApp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
+    <div class="stackTrace" id="exception-3">
+              com.kmehohsoft.dev.MainApplicationPageTest.closeApp(MainApplicationPageTest.java:68)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:786)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
+              org.testng.TestRunner.run(TestRunner.java:617)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+              org.testng.TestNG.run(TestNG.java:1031)<br />
+              org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:122)<br />
+              org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:88)<br />
+              org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:104)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)<br />
+              com.sun.proxy.$Proxy0.invoke(Unknown Source)<br />
+              org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)<br />
+              org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  closeApp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-4', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
+    <div class="stackTrace" id="exception-4">
+              com.kmehohsoft.dev.MainApplicationPageTest.closeApp(MainApplicationPageTest.java:68)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:786)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
+              org.testng.TestRunner.run(TestRunner.java:617)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+              org.testng.TestNG.run(TestNG.java:1031)<br />
+              org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:122)<br />
+              org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:88)<br />
+              org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:104)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)<br />
+              com.sun.proxy.$Proxy0.invoke(Unknown Source)<br />
+              org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)<br />
+              org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  closeApp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-5', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
+    <div class="stackTrace" id="exception-5">
+              com.kmehohsoft.dev.MainApplicationPageTest.closeApp(MainApplicationPageTest.java:68)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:786)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
+              org.testng.TestRunner.run(TestRunner.java:617)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+              org.testng.TestNG.run(TestNG.java:1031)<br />
+              org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:122)<br />
+              org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:88)<br />
+              org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:104)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)<br />
+              com.sun.proxy.$Proxy0.invoke(Unknown Source)<br />
+              org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)<br />
+              org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)<br />
+                </div>
+      </td>
+</tr>
+    
+          <tr><td colspan="3">&nbsp;</td></tr>
+      <tr><td colspan="3" class="header skippedConfig">Skipped Configuration</td></tr>
+                    <tr>
+          <td colspan="3" class="group">com.kmehohsoft.dev.LoginAfterActivationTest</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  openLoginPage
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                         
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">com.kmehohsoft.dev.MainApplicationPageTest</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  openLoginPage
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                             <i>Depends on method(s): </i>
+        <span class="dependency">com.kmehohsoft.dev.framework.BaseTest.beforeSuite</span>
+          
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  openMainApplicationPage
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                             <i>Depends on method(s): </i>
+        <span class="dependency">com.kmehohsoft.dev.LoginPageTest.openLoginPage, com.kmehohsoft.dev.framework.BaseTest.beforeSuite</span>
+          
+    
+        
+
+      </td>
+</tr>
+            </table>
 
 
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+
+  <table class="resultsTable" width="100%">
+    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
           <tr>
         <td colspan="3" class="group">com.kmehohsoft.dev.LoginAfterActivationTest</td>
       </tr>
@@ -120,10 +428,10 @@ Session ID: 3c345ed4-5e64-490a-b934-ff139314c888<br/>
                   userLoginAfterActivation
       </td>
   <td class="duration">
-    8.881s
+    0.000s
   </td>
   <td class="result">
-        
+                         
           <i>Method arguments: </i><span class="arguments">"1234qwer"</span><br />
     
         
@@ -139,10 +447,40 @@ Session ID: 3c345ed4-5e64-490a-b934-ff139314c888<br/>
                   switchLanguage
       </td>
   <td class="duration">
-    1.661s
+    0.001s
   </td>
   <td class="result">
+                         
+          <i>Method arguments: </i><span class="arguments">"2", "Language:"</span><br />
+    
         
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  switchLanguage
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                         
+          <i>Method arguments: </i><span class="arguments">"2", "Language:"</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  switchLanguage
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                         
           <i>Method arguments: </i><span class="arguments">"1", "????:"</span><br />
     
         
@@ -154,11 +492,11 @@ Session ID: 3c345ed4-5e64-490a-b934-ff139314c888<br/>
                   switchLanguage
       </td>
   <td class="duration">
-    1.658s
+    0.000s
   </td>
   <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"2", "Language:"</span><br />
+                         
+          <i>Method arguments: </i><span class="arguments">"4", "Jazyk:"</span><br />
     
         
 
@@ -169,40 +507,10 @@ Session ID: 3c345ed4-5e64-490a-b934-ff139314c888<br/>
                   switchLanguage
       </td>
   <td class="duration">
-    1.698s
+    0.000s
   </td>
   <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"2", "Language:"</span><br />
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  switchLanguage
-      </td>
-  <td class="duration">
-    1.613s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"3", "Sprache:"</span><br />
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  switchLanguage
-      </td>
-  <td class="duration">
-    1.647s
-  </td>
-  <td class="result">
-        
+                         
           <i>Method arguments: </i><span class="arguments">"5", "Langue:"</span><br />
     
         
@@ -214,11 +522,11 @@ Session ID: 3c345ed4-5e64-490a-b934-ff139314c888<br/>
                   switchLanguage
       </td>
   <td class="duration">
-    1.727s
+    0.000s
   </td>
   <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"4", "Jazyk:"</span><br />
+                         
+          <i>Method arguments: </i><span class="arguments">"3", "Sprache:"</span><br />
     
         
 
@@ -229,10 +537,10 @@ Session ID: 3c345ed4-5e64-490a-b934-ff139314c888<br/>
                   switchToAuthorizationPage
       </td>
   <td class="duration">
-    0.949s
+    0.000s
   </td>
   <td class="result">
-        
+                         
     
         
 
@@ -243,10 +551,10 @@ Session ID: 3c345ed4-5e64-490a-b934-ff139314c888<br/>
                   switchToUserAgreementPage
       </td>
   <td class="duration">
-    2.635s
+    0.001s
   </td>
   <td class="result">
-        
+                         
     
         
 
@@ -257,10 +565,10 @@ Session ID: 3c345ed4-5e64-490a-b934-ff139314c888<br/>
                   userActivation
       </td>
   <td class="duration">
-    9.703s
+    0.000s
   </td>
   <td class="result">
-        
+                         
     
         
 
@@ -275,10 +583,10 @@ Session ID: 3c345ed4-5e64-490a-b934-ff139314c888<br/>
                   backToPatientsPage
       </td>
   <td class="duration">
-    6.206s
+    0.001s
   </td>
   <td class="result">
-        
+                         
     
         
 
@@ -289,10 +597,24 @@ Session ID: 3c345ed4-5e64-490a-b934-ff139314c888<br/>
                   checkApplicationData
       </td>
   <td class="duration">
-    8.860s
+    0.000s
   </td>
   <td class="result">
+                         
+    
         
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  downloadDatabase
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+                         
     
         
 
@@ -303,10 +625,10 @@ Session ID: 3c345ed4-5e64-490a-b934-ff139314c888<br/>
                   downloadOrOpenManual
       </td>
   <td class="duration">
-    19.800s
+    0.000s
   </td>
   <td class="result">
-        
+                         
     
         
 
@@ -317,16 +639,17 @@ Session ID: 3c345ed4-5e64-490a-b934-ff139314c888<br/>
                   watchUserAgreement
       </td>
   <td class="duration">
-    7.254s
+    0.000s
   </td>
   <td class="result">
-        
+                         
     
         
 
       </td>
 </tr>
       </table>
+
   
 </body>
 </html>

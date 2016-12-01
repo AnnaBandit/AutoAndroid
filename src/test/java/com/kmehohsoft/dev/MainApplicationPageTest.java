@@ -4,9 +4,11 @@ import com.kmehohsoft.dev.androidpages.LoginActivity;
 import com.kmehohsoft.dev.androidpages.MainApplicationPageActivity;
 import com.kmehohsoft.dev.framework.BaseTest;
 import com.kmehohsoft.dev.framework.Settings;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import static com.kmehohsoft.dev.framework.AndroidBasePage.androiddriver;
 import static com.kmehohsoft.dev.framework.AndroidBasePage.settings;
 import static org.fest.assertions.Assertions.assertThat;
 import static com.kmehohsoft.dev.framework.AndroidBasePage.initPage;
@@ -59,5 +61,10 @@ public class MainApplicationPageTest  extends BaseTest {
         mainapplicationpageactivity.clickAboutItem();
         assertTrue(mainapplicationpageactivity.checkApplicationVersion());
         assertTrue(mainapplicationpageactivity.checkUserAccountLink(Integer.parseInt(settings.getUserId())));
+    }
+
+    @AfterMethod(alwaysRun= true)
+    public void closeApp() {
+        androiddriver.resetApp();
     }
 }

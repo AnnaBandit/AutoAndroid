@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="AuthorizationAndLoginTest"
-           tests="1"
+           tests="2"
            failures="0"
            errors="0"
-           skipped="0"
-           time="8.881">
+           skipped="2"
+           time="0.000">
   <properties />
   
+            <testcase name="openLoginPage" time="0.0" classname="com.kmehohsoft.dev.LoginAfterActivationTest">
+          <skipped />
+    </testcase>
+            <testcase name="userLoginAfterActivation" time="0.0" classname="com.kmehohsoft.dev.LoginAfterActivationTest">
+          <skipped />
+    </testcase>
   
-            <testcase name="userLoginAfterActivation" time="8.881" classname="com.kmehohsoft.dev.LoginAfterActivationTest" />
-      
+  
 </testsuite>

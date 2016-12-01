@@ -23,7 +23,7 @@ public class PatientsTest extends BaseTest {
         loginactivity = initPage(LoginActivity.class);
         patientsactivity = initPage(PatientsActivity.class);
     }
-
+/*
         @Test(dataProvider = "UserID",priority = 1)
         public void checkListOfPatients(String userid){
             loginactivity.clickLoginButton();
@@ -54,7 +54,7 @@ public class PatientsTest extends BaseTest {
             patientsactivity.clickFirstItemInPreviousVisitsList();
             assertThat(patientsactivity.checkIfAnalysisButtonEnabled()).isTrue();
         }
-
+*/
         @Test(dataProvider = "NewPatientDisease",priority = 6)
         public void addNewPatient(String disease,String userid){
             patientsactivity.openNewPatientPage();

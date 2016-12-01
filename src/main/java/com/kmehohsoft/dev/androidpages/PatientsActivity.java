@@ -29,6 +29,7 @@ public class PatientsActivity extends AndroidBasePage {
     private String patientLastNameTextViewID = "eri.kmehohsoft.android.tablet:id/last_name_text_view";
     private String patientBirthdayButtonID = "eri.kmehohsoft.android.tablet:id/bday_button";
     private String calendarPickButtonID = "android:id/button1";
+    private String genderGroup = "eri.kmehohsoft.android.tablet:id/gender_radio_group";
     private String radioButtonMaleID = "eri.kmehohsoft.android.tablet:id/radioMale";
     private String radioButtonFemaleID = "eri.kmehohsoft.android.tablet:id/radioFemale";
     private String insuranceEditTextID = "eri.kmehohsoft.android.tablet:id/insurance_edit_text";
@@ -291,7 +292,7 @@ public class PatientsActivity extends AndroidBasePage {
             reasonTextField.swipe(SwipeElementDirection.UP, 2000);
     }
 
-    private void setBloodType(String bloodType){
+  /*  private void setBloodType(String bloodType){
         MobileElement bloodtype  = (MobileElement) AndroidBasePage.androiddriver.findElementsById(bloodTypeSpinnerID).get(0);
         bloodtype.tap(1, 5);
         MobileElement bloodtypelist  = (MobileElement) AndroidBasePage.androiddriver.findElementsByClassName(bloodTypeListClass).get(0);
@@ -301,7 +302,15 @@ public class PatientsActivity extends AndroidBasePage {
                 mob.tap(1, 5);
             }
         }
+    }*/
+    private void chooseBloodType(byte bloodType){
+        MobileElement bloodtype  = (MobileElement) AndroidBasePage.androiddriver.findElementsById(bloodTypeSpinnerID).get(0);
+        bloodtype.tap(1, 5);
+        MobileElement bloodtypelist  = (MobileElement) AndroidBasePage.androiddriver.findElementsByClassName(bloodTypeListClass).get(0);
+        bloodtypelist.findElementsById(bloodTypeTextViewID).get(bloodType).tap(1, 5);
+
     }
+
 
     private void chooseRhesusType(int rhesus){
         MobileElement rhesustype  = (MobileElement) AndroidBasePage.androiddriver.findElementsById(rhesusTypeSpinnerID).get(0);
@@ -373,6 +382,9 @@ public class PatientsActivity extends AndroidBasePage {
         email.clear();
         email.sendKeys(Email);
     }
+
+
+
 
     private void enterPatientAllergies(String Allergies){
         MobileElement allergy  = (MobileElement) AndroidBasePage.androiddriver.findElementsById(allergiesEditTextID).get(0);
@@ -464,7 +476,7 @@ public class PatientsActivity extends AndroidBasePage {
         enterPatientPhone(patient.getPhone());
         enterPatientEmail(patient.getEmail());
         swipeToAnalysis(35);
-        setBloodType(patient.getBloodTypeGroup());
+        chooseBloodType(patient.getBloodTypeGroup());
         chooseRhesusType(Math.abs(boolToInt(patient.getBloodTypeRhesus())));
         enterPatientAllergies(patient.getAllergies());
         enterPatientFamilyDiseases(patient.getFamilyDiseases());
@@ -564,7 +576,8 @@ public class PatientsActivity extends AndroidBasePage {
     }
 
     private boolean getPatientGender(){
-        MobileElement maleradio  = (MobileElement) AndroidBasePage.androiddriver.findElementsById(radioButtonMaleID).get(0);
+        MobileElement gender = (MobileElement) AndroidBasePage.androiddriver.findElementsById(genderGroup).get(0);
+        MobileElement maleradio  = gender.findElementsById(radioButtonMaleID).get(0);
         return maleradio.isSelected();
     }
 
@@ -588,7 +601,7 @@ public class PatientsActivity extends AndroidBasePage {
         return email.getText();
     }
 
-    /*private byte getPatientBloodTypeGroup(){
+    private byte getPatientBloodTypeGroup(){
         String bloodTypes[] = {"0","A","B","AB"};
         MobileElement bloodtype  = (MobileElement) AndroidBasePage.androiddriver.findElementsById(patientBloodTypeTextViewID).get(0);
         String bloodType = bloodtype.getText();
@@ -597,13 +610,13 @@ public class PatientsActivity extends AndroidBasePage {
             if (bloodTypes[i].equalsIgnoreCase(bloodType)) return i;
         }
         return i;
-    }*/
-
-    private String getPatientBloodTypeGroup(){
+    }
+/*
+    private byte getPatientBloodTypeGroup(){
         String bloodTypes[] = {"0","A","B","AB"};
         Random myRandom = new Random();
         return bloodTypes[myRandom.nextInt(bloodTypes.length)];
-    }
+    }*/
 
     private boolean getPatientRhesus(){
         MobileElement rhesustype  = (MobileElement) AndroidBasePage.androiddriver.findElementsById(patientRhesusTextViewID).get(1);
@@ -662,7 +675,7 @@ public class PatientsActivity extends AndroidBasePage {
     public boolean compareBloodTypeGroup(){
         System.out.println(patient.getBloodTypeGroup());
         System.out.println(getPatientBloodTypeGroup());
-        return patient.getBloodTypeGroup().equals(getPatientBloodTypeGroup());
+        return patient.getBloodTypeGroup() == getPatientBloodTypeGroup();
     }
 
     public boolean comparePatientEmail(){
@@ -682,7 +695,7 @@ public class PatientsActivity extends AndroidBasePage {
     }
 
     public boolean comparePatientGender(){
-        System.out.println("сгенерированый гендер " + patient.getGender() + "; в приложении");
+        System.out.println("сгенерированый гендер " + patient.getGender() + "; в приложении" + getPatientGender());
         return patient.getGender() == getPatientGender();
     }
 
@@ -713,17 +726,20 @@ public class PatientsActivity extends AndroidBasePage {
         enterPatientFirstName(patient.getFirstName());
         enterPatientMiddleName(patient.getMiddleName());
         enterPatientLastName(patient.getLastName());
+        chooseGender(patient.getGender());
         enterPatientInsuranceNumber(patient.getInsuranceNumber());
         swipeToAddress(35);
         enterPatientAddress(patient.getAddress());
         enterPatientPhone(patient.getPhone());
         enterPatientEmail(patient.getEmail());
         swipeToAnalysis(35);
+        chooseBloodType(patient.getBloodTypeGroup());
+        chooseRhesusType(Math.abs(boolToInt(patient.getBloodTypeRhesus())));
         enterPatientAllergies(patient.getAllergies());
         enterPatientFamilyDiseases(patient.getFamilyDiseases());
         enterPatientComplaints(patient.getComplaints());
         swipeToShowTheAgreementButton(35);
-        swipeToDiscardButton(10);
+        swipeToDiscardButton(5);
     }
 
 }

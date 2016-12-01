@@ -9,22 +9,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES />
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$USER_HOME$/Downloads/Microsoft JDBC Driver 6.0 for SQL Server/sqljdbc_6.0/enu/samples/adaptive" />
-          <root url="file://$USER_HOME$/Downloads/Microsoft JDBC Driver 6.0 for SQL Server/sqljdbc_6.0/enu/samples/alwaysencrypted" />
-          <root url="file://$USER_HOME$/Downloads/Microsoft JDBC Driver 6.0 for SQL Server/sqljdbc_6.0/enu/samples/connections" />
-          <root url="file://$USER_HOME$/Downloads/Microsoft JDBC Driver 6.0 for SQL Server/sqljdbc_6.0/enu/samples/datatypes" />
-          <root url="file://$USER_HOME$/Downloads/Microsoft JDBC Driver 6.0 for SQL Server/sqljdbc_6.0/enu/samples/resultsets" />
-          <root url="file://$USER_HOME$/Downloads/Microsoft JDBC Driver 6.0 for SQL Server/sqljdbc_6.0/enu/samples/sparse" />
-        </SOURCES>
-      </library>
-    </orderEntry>
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-server:3.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.48" level="project" />
     <orderEntry type="library" name="Maven: net.jcip:jcip-annotations:1.0" level="project" />
